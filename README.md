@@ -27,7 +27,9 @@
  >   * Output: Console outputs corresponding to specific inputs
  > * Design Patterns
  >   * Factory Pattern
- >     * This pattern is a creational design pattern that consists of a superclass that provides an interface. 
+ >     * The Factory Pattern is a great pattern for creating multiple objects. This pattern is a creational design pattern that consists of a superclass that provides an interface. The corresponding subclasses that inherent from the superclass will allow us to make many unique objects. The objects that are created by this common interface will have similar features, but it will also have its own unique features. This is very convenient for our project since we are going to have different types of characters, but they will all share common traits like health points and attack damage. This design pattern will make it simple for us to make multiple objects that share common traits.  
+ >   * Flyweight Pattern
+ >     *
  > * This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
 
  > ## Phase II
