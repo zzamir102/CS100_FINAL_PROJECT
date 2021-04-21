@@ -3,7 +3,7 @@
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # Kingdom of Buritania
  
- > Authors: \<[Zamir Noor](https://github.com/zzamir102)\>
+ > Authors: \<[Zamir Noor](https://github.com/zzamir102)\ \<[Ali Noor](https://github.com/anoor012)\ >
 
 
 ## Project Description
