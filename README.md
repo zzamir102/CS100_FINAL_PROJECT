@@ -20,17 +20,20 @@
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include
  > * We chose to make a Text-Based Role-Playing Game because it seems very fun and relatable to us. This project idea allows us to be creative such that we are able to tell unique stories and make unique characters through a programming project. 
- > * C++, Valgrind, CMake, and Google Framework
- >   * [toolname](link) - Short description
+ > * Languages/tools/technologies
+ >   * C++ - Programming Language used for our project
+ >   * Valgrind - Used to detect memory leaks
+ >   * CMake - to compile various file in our program
+ >   * Google Framework - helps create unit tests for code
  > * Input/Output
  >   * Input: Keyboard prompts for choosing character/level
  >   * Output: Console outputs corresponding to specific inputs
  > * Design Patterns
  >   * Factory Pattern
- >     * The Factory Pattern is a great pattern for creating multiple objects. This pattern is a creational design pattern that consists of a superclass that provides an interface. The corresponding subclasses that inherent from the superclass will allow us to make many unique objects. The objects that are created by this common interface will have similar features, but it will also have its own unique features. This is very convenient for our project since we are going to have different types of characters, but they will all share common traits like health points and attack damage. This design pattern will make it simple for us to make multiple objects that share common traits.  
- >   * Flyweight Pattern
- >     *
- > * This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
+ >     * This pattern is a creational design pattern that consists of a superclass that provides an interface. The corresponding subclasses that inherent from the superclass will allow us to make many unique objects. This is very convenient for our project since we are going to have different types of characters, but they will all share common traits like health points and attack damage. One common problem we might have during implmentation is finding ways to keep characters unique but similar at the same time. This pattern solves this issue by letting various objects have common traits and its own unique traits. This design pattern will make it simple for us to make multiple objects that share common traits. 
+ >   * Decorator Pattern
+ >     *  The decorator pattern is a structural design pattern that allows new behaviors to be attached to objects.  We picked this pattern because it allows us to make differnt character types in our RPG. This pattern also encourages the creation of more specific classes, more specifically, it allows for subclasses to have its own subclasses. An issue this design pattern can solve the creation of classes within subclasses. For instance, if we implment a new character type, we might also desire different characters within this new character type. This design pattern encourages that type of object creation, making this design pattern a suitable solution to our problems. 
+
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
