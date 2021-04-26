@@ -1,9 +1,7 @@
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\>"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
+
 # Kingdom of Buritania
  
- > Authors: <[Zamir Noor](https://github.com/zzamir102)> <[Ali Noor](https://github.com/anoor012)> <[Jeng-Rung Tu](https://github.com/JengRung)>
+ > Authors: [Zamir Noor](https://github.com/zzamir102) [Ali Noor](https://github.com/anoor012) [Jeng-Rung Tu](https://github.com/JengRung)
 
 
 ## Project Description
