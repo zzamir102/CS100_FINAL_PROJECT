@@ -1,25 +1,26 @@
 
 # Kingdom of Buritania
  
- > Authors: [Zamir Noor](https://github.com/zzamir102) [Ali Noor](https://github.com/anoor012) [Jeng-Rung Tu](https://github.com/JengRung)
+> Authors: [Zamir Noor](https://github.com/zzamir102) [Ali Noor](https://github.com/anoor012) [Jeng-Rung Tu](https://github.com/JengRung)
 
 
 ## Project Description
- > * This is going to be a text-based RPG with a fantasy type genre. 
- > * We chose to make a Text-Based Role-Playing Game because it seems very fun and relatable to us. This project idea allows us to be creative such that we are able to tell unique stories and make unique characters through a programming project. 
- > * Languages/tools/technologies
- >   * C++ - Programming Language used for our project
- >   * Valgrind - Used to detect memory leaks
- >   * CMake - to compile various file in our program
- >   * Google Framework - helps create unit tests for code
- > * Input/Output
- >   * Input: Keyboard prompts for choosing character/level
- >   * Output: Console outputs corresponding to specific inputs
- > * Design Patterns
- >   * Factory Pattern
- >     * This pattern is a creational design pattern that consists of a superclass that provides an interface. The corresponding subclasses that inherent from the superclass will allow us to make many unique objects. This is very convenient for our project since we are going to have different types of characters, but they will all share common traits like health points and attack damage. One common problem we might have during implmentation is finding ways to keep characters unique but similar at the same time. This pattern solves this issue by letting various objects have common traits and its own unique traits. This design pattern will make it simple for us to make multiple objects that share common traits. 
- >   * Decorator Pattern
- >     *  The decorator pattern is a structural design pattern that allows new behaviors to be attached to objects.  We picked this pattern because it allows us to make differnt character types in our RPG. This pattern also encourages the creation of more specific classes, more specifically, it allows for subclasses to have its own subclasses. An issue this design pattern can solve the creation of classes within subclasses. For instance, if we implment a new character type, we might also desire different characters within this new character type. This design pattern encourages that type of object creation, making this design pattern a suitable solution to our problems. 
+### RPG Details
+  * This is going to be a text-based RPG with a fantasy type genre. 
+  * We chose to make a Text-Based Role-Playing Game because it seems very fun and relatable to us. This project idea allows us to be creative such that we are able to tell unique stories and make unique characters through a programming project. 
+###  Languages/tools/technologies
+* C++ - Programming Language used for our project
+* Valgrind - Used to detect memory leaks
+* CMake - to compile various file in our program
+* Google Framework - helps create unit tests for code
+###  Input/Output
+* Input: Keyboard prompts for choosing character/level
+* Output: Console outputs corresponding to specific inputs
+### Design Patterns
+#### Factory Pattern
+>This pattern is a creational design pattern that consists of a superclass that provides an interface. The corresponding subclasses that inherent from the superclass will allow us to make many unique objects. This is very convenient for our project since we are going to have different types of characters, but they will all share common traits like health points and attack damage. One common problem we might have during implmentation is finding ways to keep characters unique but similar at the same time. This pattern solves this issue by letting various objects have common traits and its own unique traits. This design pattern will make it simple for us to make multiple objects that share common traits. 
+#### Decorator Pattern
+>The decorator pattern is a structural design pattern that allows new behaviors to be attached to objects.  We picked this pattern because it allows us to make differnt character types in our RPG. This pattern also encourages the creation of more specific classes, more specifically, it allows for subclasses to have its own subclasses. An issue this design pattern can solve the creation of classes within subclasses. For instance, if we implment a new character type, we might also desire different characters within this new character type. This design pattern encourages that type of object creation, making this design pattern a suitable solution to our problems. 
 
 
  > ## Phase II
