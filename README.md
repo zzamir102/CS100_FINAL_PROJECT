@@ -17,10 +17,10 @@
 * Input: Keyboard prompts for choosing character/level
 * Output: Console outputs corresponding to specific inputs
 ### Design Patterns
-#### Factory Pattern
->This pattern is a creational design pattern that consists of a superclass that provides an interface. The corresponding subclasses that inherent from the superclass will allow us to make many unique objects. This is very convenient for our project since we are going to have different types of characters, but they will all share common traits like health points and attack damage. One common problem we might have during implmentation is finding ways to keep characters unique but similar at the same time. This pattern solves this issue by letting various objects have common traits and its own unique traits. This design pattern will make it simple for us to make multiple objects that share common traits. 
-#### Decorator Pattern
->The decorator pattern is a structural design pattern that allows new behaviors to be attached to objects.  We picked this pattern because it allows us to make differnt character types in our RPG. This pattern also encourages the creation of more specific classes, more specifically, it allows for subclasses to have its own subclasses. An issue this design pattern can solve the creation of classes within subclasses. For instance, if we implment a new character type, we might also desire different characters within this new character type. This design pattern encourages that type of object creation, making this design pattern a suitable solution to our problems. 
+#### Abstract Factory Pattern
+>We picked the Abstract Factory patttern because it allows us to create families of objects. This is important to our RPG, since we will need to be making different types of characters. These unique characters can make their own unique family, which is distinguished by certain characteristics such as their ability or weapons. Some problems we might encounter is inheritance and how classes will work together. Another issue that branches from this issue is organization of the classes we create. The Abstract Factory Pattern will be a great solution for this problem because it has the structure and interface for the abundance of classes/objects we are going to create.   
+#### Strategy Pattern
+>The second pattern we considered is the strategy pattern. We chose this pattern because it lets us create different attacks for the characters in our RPG. An issue we might encounter in our project is creating multiple attack functions, which consequently requires us to modify our classes. The strategy pattern will be a great solution for this problem because we can continuosly add different strategies to attack without modifying our class. The strategy pattern allows us to branch out from a class to a interface that supports the creation of multiple strategies. This pattern will allow us to continously add new attack strategies if time is allotted. 
 
 
  > ## Phase II
