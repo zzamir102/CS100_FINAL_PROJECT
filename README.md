@@ -23,7 +23,7 @@
 * The second pattern we considered is the strategy pattern. We chose this pattern because it lets us create different attacks for the characters in our RPG. An issue we might encounter in our project is the creation of multiple attack functions, which consequently requires us to modify our classes. The strategy pattern will be a great solution for this problem because we can continuously add different strategies to attack without modifying our class. The strategy pattern allows us to branch out from a class to a interface that supports the creation of multiple strategies. This pattern will allow us to continuously add new attack strategies if time is allotted. 
 
 ## Class Diagram
-![](images/UML_Diagram.png)
+![](images/New_Project_Diagram.png)
 ### Class Diagram Description
 * The above diagram depicts our classes organized in the Abstract Factory Pattern and the Strategy Pattern.
 * The AbstractFactory class is the super class for the EnemyFactory and CharacterFactory. The EnemyFactory class and CharacterFactory class create the classes named Enemy and Character. The EnemyFactory is the interface for the different type of ememies that we are going to create in our RPG. As of now, the Human class and the Demon class inherit from the Enemy interface. Furthermore, the Mage, Knight, and Archer classes inherit from the Character class.
