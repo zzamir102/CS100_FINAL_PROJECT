@@ -1,4 +1,4 @@
-#ifndef __ARCHER__HPP
+#ifndef __ARCHER_HPP__
 #define __ARCHER_HPP__
 
 #include "character.hpp"

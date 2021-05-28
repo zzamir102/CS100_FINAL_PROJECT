@@ -1,7 +1,11 @@
 #include "../header/character.hpp"
-//#include "../header/knight.hpp"
+#include "../header/knight.hpp"
 #include "../header/mage.hpp"
 #include "../header/archer.hpp"
+#include "../header/ability/archerAbility.hpp"
+#include "../header/ability/knightAbility.hpp"
+#include "../header/ability/mageAbility.hpp"
+#include "../header/AbstractFactory.hpp"
 #include <iostream>
 #include <string>
 using namespace std;
