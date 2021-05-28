@@ -7,8 +7,13 @@
 class knightAbility : public Ability
 {
 public:
-    knightAbility(){
-        type = "knight";
+    knightAbility() {
+        type = "Knight";
+        catchPhrase = "";
+    }
+
+    virtual void specialAbility() {
+        return;
     }
 
 };

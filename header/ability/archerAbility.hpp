@@ -7,8 +7,13 @@
 class archerAbility : public Ability
 {
 public:
-    archerAbility(){
-        type = "archer";
+    archerAbility() {
+        type = "Archer";
+        catchPhrase = "";
+    }
+
+    virtual void specialAbility() {
+        return;
     }
 
 };

@@ -7,8 +7,13 @@
 class mageAbility : public Ability
 {
 public:
-    mageAbility(){
-        type = "mage";
+    mageAbility() {
+        type = "Mage";
+        catchPhrase = "";
+    }
+
+    virtual void specialAbility() {
+        return;
     }
 
 };
