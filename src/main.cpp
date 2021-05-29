@@ -71,9 +71,7 @@ string MainMenu(AbstractFactory* &factory)
 	}
 	else if (character == "Archer") {
 		factory = new ArcherFactory;
-	}
-	
-	delete factory; 
+	} 
 	
 	return character;	
 }
@@ -86,6 +84,7 @@ int main() {
 	Ability* ability = _Factory->CreateAbility();
 	cout << entry->getType();
 	
+	delete _Factory;	
 	delete entry;
 	delete ability;		
 
