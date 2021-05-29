@@ -2,6 +2,10 @@
 #define __character_test_hpp__
 
 #include "../header/character.hpp"
+#include "../header/knight.hpp"
+#include "../header/mage.hpp"
+#include "../header/archer.hpp"
+
 
 using namespace std;
 
@@ -55,6 +59,36 @@ TEST(CharacterClass, DefenceFnc) {
 	test.addArmor(20.0);
 	test.Defence(40.0);
 	EXPECT_EQ(test.getHealth(), 48.0);
+}
+
+TEST(MageClass, TypeFnc) {
+	Character* test = new Mage("Bob");
+	EXPECT_EQ(test->getType(), "Mage");
+}
+
+TEST(MageClass, NameFnc) {
+	Character* test = new Mage("Bob");
+	EXPECT_EQ(test->getName(), "Bob");
+}
+
+TEST(KnightClass, TypeFnc) {
+	Character* test = new Knight("Bob");
+	EXPECT_EQ(test->getType(), "Knight");
+}
+
+TEST(KnightClass, NameFnc) {
+	Character* test = new Knight("Bob");
+	EXPECT_EQ(test->getName(), "Bob");	
+}
+
+TEST(ArcherClass, TypeFnc) {
+	Character* test = new Archer("Bob");
+	EXPECT_EQ(test->getType(), "Archer");
+}
+
+TEST(ArcherClass, NameFnc) {
+	Character* test = new Archer("Bob");
+	EXPECT_EQ(test->getName(), "Bob");
 }
 
 
