@@ -36,6 +36,26 @@ public:
 		return name;
 	}
 
+	double getHealth() {
+		return health;
+	}
+
+	double getAttackDamage() {
+		return AttackDamage;
+	}
+
+	double getArmor() {
+		return armor;
+	}
+
+	int getExperience() {
+		return experience;
+	}
+
+	int getLevel() {
+		return level;
+	}
+
 	void setName(const string& _name) {
 		this->name = _name;
 	}
@@ -87,7 +107,7 @@ public:
 	void Defence(double dmg) {
 		double dmgDefended = 0.0;
 		dmgDefended = (dmg * armor) / 100;
-		health = dmg - dmgDefended;
+		this->health = health - (dmg - dmgDefended);
 	}
 
 };
