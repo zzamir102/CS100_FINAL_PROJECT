@@ -10,7 +10,7 @@
 #include <string>
 using namespace std;
 
-void MainMenu()
+string MainMenu(AbstractFactory* &factory)
 {
 	cout << "---------------------------------" << endl;
 	cout << "Welcome to Kingdom  of Buritania!" << endl;
@@ -62,8 +62,32 @@ void MainMenu()
 			cout << "-------------------" << endl << endl;
 		}
 	}
+	
+	if (character == "Knight") {
+		factory = new KnightFactory;
+	}
+	else if (character == "Mage") {
+		factory = new MageFactory;
+	}
+	else if (character == "Archer") {
+		factory = new ArcherFactory;
+	}
+	
+	delete factory; 
+	
+	return character;	
 }
 
 int main() {
+	AbstractFactory* _Factory;
+	string character;
+	character = MainMenu(_Factory);
+	Character* entry = _Factory->CreateCharacter(character);
+	Ability* ability = _Factory->CreateAbility();
+	cout << entry->getType();
+	
+	delete entry;
+	delete ability;		
+
 	return 0;
 }
