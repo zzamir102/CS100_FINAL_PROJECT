@@ -12,13 +12,10 @@ public:
         catchPhrase = "";
     }
 
-    virtual void specialAbility() {
-        return;
-    }
+    virtual double specialAbility(double _armor, double _health, double _AttackDamage) {
+        return 2 * _AttackDamage;
+    }    
 
 };
-
-
-
 
 #endif

@@ -56,6 +56,14 @@ public:
 		return level;
 	}
 
+	void setHealth(double _health) {
+		health = _health;
+	}
+
+	void setArmor(double _armor) {
+		armor = _armor;
+	}
+
 	void setName(const string& _name) {
 		this->name = _name;
 	}

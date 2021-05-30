@@ -1,3 +1,4 @@
+
 #pragma once
 #ifndef __ENEMY_HPP__
 #define __ENEMY_HPP__
@@ -22,7 +23,23 @@ public:
         armor = 0.0;
     }
 
-    // adder
+    double getHealth() {
+        return health;
+	}
+
+    double getArmor() {
+        return armor;
+    }
+
+    void display() {
+        cout << "Health: " << health;
+        cout << "Armor: " << armor; 
+    }
+
+    double getAttackDamage() {
+        return AttackDamage;
+    }
+    //adder
     void addHealth(double health)
     {
         this->health += health;
@@ -37,8 +54,7 @@ public:
     {
         this->armor += armor;
     }
-
-    // getter
+   //getter 
     double Attack()
     {
         return AttackDamage;
@@ -48,7 +64,7 @@ public:
     {
         double dmgDefended = 0.0;
         dmgDefended = (dmg * armor) / 100;
-        health = dmg - dmgDefended;
+        health = health - (dmg - dmgDefended);
     }
 };
 

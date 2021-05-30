@@ -14,7 +14,7 @@ public:
 		type = "Archer";
 		health = 100;
 		AttackDamage = 60.0;
-		armor = 7.5;
+		armor = 20.0;
 		experience = 0;
 		level = 0;
 	}

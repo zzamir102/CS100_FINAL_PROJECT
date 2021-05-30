@@ -6,6 +6,9 @@
 #include "../header/ability/knightAbility.hpp"
 #include "../header/ability/mageAbility.hpp"
 #include "../header/AbstractFactory.hpp"
+#include "../header/enemy.hpp"
+#include "../header/human.hpp"
+#include "../header/demon.hpp"
 #include <iostream>
 #include <string>
 using namespace std;
