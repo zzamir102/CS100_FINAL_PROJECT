@@ -30,7 +30,7 @@ public:
 	}
 
 	//Implement Strategy Pattern
-	virtual void specialAbility() = 0;
+	virtual double specialAbility(double _armor, double _health, double _AttackDamage) = 0;
 
 
 

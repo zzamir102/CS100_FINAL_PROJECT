@@ -4,10 +4,11 @@
 
 class Human:public Enemy{
 
+public:
     Human(){
-        health = 50;
-        AttackDamage = 100;
-        armor = 30;
+        health = 100.0;
+        AttackDamage = 30.0;
+        armor = 60.0;
     }
 
 };

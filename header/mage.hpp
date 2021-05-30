@@ -13,7 +13,7 @@ public:
 		type = "Mage";
 		health = 100.0;
 		AttackDamage = 65.0;
-		armor = 5.0;
+		armor = 15.0;
 		experience - 0;
 		level = 0;
 	}

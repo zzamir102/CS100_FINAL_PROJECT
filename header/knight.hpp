@@ -15,7 +15,7 @@ public:
 		type = "Knight";
 		health = 100.0;
 		AttackDamage = 50.0;
-		armor = 10.0;
+		armor = 30.0;
 		experience = 0;
 		level = 0;
 	}
