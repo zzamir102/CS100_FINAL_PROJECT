@@ -7,8 +7,8 @@ class Human:public Enemy{
 public:
     Human(){
         health = 100.0;
-        AttackDamage = 30.0;
-        armor = 60.0;
+        AttackDamage = 40.0;
+        armor = 50.0;
     }
 
 };
