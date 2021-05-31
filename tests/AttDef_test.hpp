@@ -7,7 +7,10 @@
 #include "../header/demon.hpp"
 
 TEST(AttDefTest, addHealthFnc) {
-	
+    Human humanTest;
+    Mage* mageTest = new Mage("name");
+    humanTest.Defence(mageTest->Attack());
+	EXPECT_EQ(humanTest.getHealth(), 66);
 }
 
 
