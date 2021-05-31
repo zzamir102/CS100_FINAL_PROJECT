@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "factory_test.hpp"
 #include "character_test.hpp"
-
+#include "ability_test.hpp"
 
 using namespace std;
 

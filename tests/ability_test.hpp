@@ -1,33 +1,32 @@
-#ifndef __abilityTest_hpp__
-#define __abilityTest_hpp__
+#ifndef __ability_test_hpp__
+#define __ability_test_hpp__
 
-#include "gtest/gtest.h"
 #include "../header/ability/ability.hpp"
 
 using namespace std;
 
-TEST(AbilityTest, getType){
+TEST(AbilityTest, getType1){
     archerAbility testArcher;
     EXPECT_EQ(testArcher.getType(), "Archer");
 }
-TEST(AbilityTest, getType){
+TEST(AbilityTest, getType2){
     mageAbility testMage;
     EXPECT_EQ(testMage.getType(), "Mage");
 }
-TEST(AbilityTest, getType){
+TEST(AbilityTest, getType3){
     knightAbility testKnight;
     EXPECT_EQ(testKnight.getType(), "Knight");
 }
 
-TEST(AbilityTest, getCatchPhrase){
+TEST(AbilityTest, getCatchPhrase1){
     archerAbility testArcher;
-    EXPECT_EQ(testArcher.getcatchPhrase(), "BULLSEYE");
+    EXPECT_EQ(testArcher.getcatchPhrase(), "BULLSEYE!");
 }
-TEST(AbilityTest, getCatchPhrase){
+TEST(AbilityTest, getCatchPhrase2){
     mageAbility testMage;
-    EXPECT_EQ(testMage.getcatchPhrase(), "Healing");
+    EXPECT_EQ(testMage.getcatchPhrase(), "Healing!");
 }
-TEST(AbilityTest, getCatchPhrase){
+TEST(AbilityTest, getCatchPhrase3){
     knightAbility testKnight;
     EXPECT_EQ(testKnight.getcatchPhrase(), "ARMORING UP!");
 }
