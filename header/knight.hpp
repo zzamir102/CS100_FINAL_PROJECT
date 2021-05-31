@@ -14,7 +14,7 @@ public:
 		this->name = name;
 		type = "Knight";
 		health = 100.0;
-		AttackDamage = 50.0;
+		AttackDamage = 49.0;
 		armor = 30.0;
 		experience = 0;
 		level = 0;

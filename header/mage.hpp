@@ -12,7 +12,7 @@ public:
 		name = _name;
 		type = "Mage";
 		health = 100.0;
-		AttackDamage = 65.0;
+		AttackDamage = 60.0;
 		armor = 15.0;
 		experience - 0;
 		level = 0;
