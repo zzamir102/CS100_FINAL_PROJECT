@@ -26,7 +26,7 @@ TEST(AttDefTest, MageAbility1) {
     Ability* mageAbilTest = new mageAbility();
     double usedAbility = mageAbilTest->specialAbility(mageTest->getArmor(), mageTest->getHealth(), mageTest->getAttackDamage());
 	mageTest->setHealth(usedAbility);
-    EXPECT_EQ(mageTest->getHealth(), 100);
+    EXPECT_EQ(mageTest->getHealth(), 200);
 }
 
 TEST(AttDefTest, MageAbility2) {
@@ -50,7 +50,7 @@ TEST(AttDefTest, KnightBasicAttack2) {
     Demon demonTest;
     Knight* knightTest = new Knight("name");
     demonTest.Defence(knightTest->Attack());
-	EXPECT_EQ(demonTest.getHealth(), 65.7);
+	EXPECT_EQ(demonTest.getHealth(), 85.3);
 }
 
 TEST(AttDefTest, KnightAbility1) {
