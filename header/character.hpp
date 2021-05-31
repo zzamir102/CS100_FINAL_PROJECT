@@ -84,14 +84,18 @@ public:
 		this->experience += exp;
 	}
 
+	void spendExperience(int exp) {
+		this->experience -= exp;
+	}
+
 	void printStats() {
 		cout << name << "'s" << " Statistics:" << endl;
 		cout << "--------------------------------" << endl;
 		cout << "Type: " << type << endl;
 		cout << "Health: " << health << endl;
 		cout << "Armor: " << armor << endl;
+		cout << "Attack Damage: " << AttackDamage << endl;
 		cout << "Current Experience: " << experience << endl;
-		cout << "Current Level: " << level << endl;
 		cout << "--------------------------------" << endl;
 	}
 
@@ -99,7 +103,6 @@ public:
 
 		if (experience == 100) {
 			level = level + 1;
-			experience = 0;
 			return true;
 		}
 		else {
