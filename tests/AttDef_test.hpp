@@ -61,7 +61,7 @@ TEST(AttDefTest, KnightAbility1) {
     EXPECT_EQ(knightTest->getArmor(), 60);
 }
 
-TEST(AttDefTest, KnightAbility1) {
+TEST(AttDefTest, KnightAbility2) {
     Knight* knightTest = new Knight("name");
     Ability* knightAbilTest = new knightAbility();
     knightTest->setArmor(12);
