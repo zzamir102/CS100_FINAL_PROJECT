@@ -4,10 +4,11 @@
 
 class Demon:public Enemy{
 
+public:
     Demon(){
         health = 100;
-        AttackDamage = 20;
-        armor = 60;
+        AttackDamage = 80;
+        armor = 70;
     }
 
 };
