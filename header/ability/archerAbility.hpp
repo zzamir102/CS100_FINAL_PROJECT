@@ -9,7 +9,7 @@ class archerAbility : public Ability
 public:
     archerAbility() {
         type = "Archer";
-        catchPhrase = "";
+        catchPhrase = "BULLSEYE!"
     }
 
     virtual double specialAbility(double _armor, double _health, double _AttackDamage) {

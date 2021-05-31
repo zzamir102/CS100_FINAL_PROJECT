@@ -9,7 +9,7 @@ class knightAbility : public Ability
 public:
     knightAbility() {
         type = "Knight";
-        catchPhrase = "";
+        catchPhrase = "ARMORING UP!";
     }
 
     virtual double specialAbility(double _armor, double _health, double _AttackDamage) {

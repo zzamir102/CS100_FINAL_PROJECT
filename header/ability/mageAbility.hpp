@@ -9,7 +9,7 @@ class mageAbility : public Ability
 public:
     mageAbility() {
         type = "Mage";
-        catchPhrase = "";
+        catchPhrase = "Healing!";
     }
     virtual double specialAbility(double _armor, double _health, double _AttackDamage) {
         return 2 * _health;
