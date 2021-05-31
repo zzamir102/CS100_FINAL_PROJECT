@@ -2,6 +2,7 @@
 #include "factory_test.hpp"
 #include "character_test.hpp"
 #include "ability_test.hpp"
+#include "AttDef_test.hpp"
 
 using namespace std;
 
