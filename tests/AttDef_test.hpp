@@ -22,19 +22,20 @@ TEST(AttDefTest, MageBasicAttack2) {
 }
 
 TEST(AttDefTest, MageAbility1) {
-    Human humanTest;
     Mage* mageTest = new Mage("name");
     Ability* mageAbilTest = new mageAbility();
-    humanTest.Defence(mageAbilTest->specialAbility(mageTest->getArmor(), mageTest->getHealth(), mageTest->getAttackDamage()));
-	EXPECT_EQ(humanTest.getHealth(), 70);
+    double usedAbility = mageAbilTest->specialAbility(mageTest->getArmor(), mageTest->getHealth(), mageTest->getAttackDamage());
+	mageTest->setHealth(usedAbility);
+    EXPECT_EQ(mageTest->getHealth(), 100);
 }
 
 TEST(AttDefTest, MageAbility2) {
-    Demon demonTest;
     Mage* mageTest = new Mage("name");
     Ability* mageAbilTest = new mageAbility();
-    demonTest.Defence(mageAbilTest->specialAbility(mageTest->getArmor(), mageTest->getHealth(), mageTest->getAttackDamage()));
-	EXPECT_EQ(demonTest.getHealth(), 82);
+    mageTest->setHealth(35);
+    double usedAbility = mageAbilTest->specialAbility(mageTest->getArmor(), mageTest->getHealth(), mageTest->getAttackDamage());
+	mageTest->setHealth(usedAbility);
+    EXPECT_EQ(mageTest->getHealth(), 70);
 }
 
 //Knight Test
@@ -53,19 +54,20 @@ TEST(AttDefTest, KnightBasicAttack2) {
 }
 
 TEST(AttDefTest, KnightAbility1) {
-    Human humanTest;
     Knight* knightTest = new Knight("name");
     Ability* knightAbilTest = new knightAbility();
-    humanTest.Defence(knightAbilTest->specialAbility(knightTest->getArmor(), knightTest->getHealth(), knightTest->getAttackDamage()));
-	EXPECT_EQ(humanTest.getHealth(), 75.5);
+    double usedAbility = knightAbilTest->specialAbility(knightTest->getArmor(), knightTest->getHealth(), knightTest->getAttackDamage());
+	knightTest->setArmor(usedAbility);
+    EXPECT_EQ(knightTest->getArmor(), 60);
 }
 
-TEST(AttDefTest, KnightAbility2) {
-    Demon demonTest;
+TEST(AttDefTest, KnightAbility1) {
     Knight* knightTest = new Knight("name");
     Ability* knightAbilTest = new knightAbility();
-    demonTest.Defence(knightAbilTest->specialAbility(knightTest->getArmor(), knightTest->getHealth(), knightTest->getAttackDamage()));
-	EXPECT_EQ(demonTest.getHealth(), 85.3);
+    knightTest->setArmor(12);
+    double usedAbility = knightAbilTest->specialAbility(knightTest->getArmor(), knightTest->getHealth(), knightTest->getAttackDamage());
+	knightTest->setArmor(usedAbility);
+    EXPECT_EQ(knightTest->getArmor(), 24);
 }
 
 //Archer Test
