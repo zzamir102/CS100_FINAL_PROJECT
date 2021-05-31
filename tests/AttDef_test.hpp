@@ -91,7 +91,7 @@ TEST(AttDefTest, ArcherAbility1) {
 	EXPECT_EQ(humanTest.getHealth(), 40);
 }
 
-TEST(AttDefTest, ArcherAbility1) {
+TEST(AttDefTest, ArcherAbility2) {
     Demon demonTest;
     Archer* archerTest = new Archer("name");
     Ability* archerAbilTest = new archerAbility();
