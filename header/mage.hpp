@@ -14,7 +14,7 @@ public:
 		health = 100.0;
 		AttackDamage = 60.0;
 		armor = 15.0;
-		experience - 0;
+		experience = 0;
 		level = 0;
 	}
 
