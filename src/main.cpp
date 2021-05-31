@@ -263,6 +263,114 @@ bool Level1(Character* _entry, Ability* _ability) {
 	}
 }
 
+bool Level2(Character* _entry, Ability* _ability) {
+
+	cout << "================================" << endl;
+	cout << "---------Enter Level 2---------" << endl;
+	cout << "================================" << endl << endl;
+	cout << "==============================================" << endl;
+	cout << "   The furious demon has arrived    " << endl;
+	cout << "==============================================" << endl << endl;
+
+	cout << "Get ready to attack " << _entry->getName() << "!" << endl;
+	cout << endl << "CAUTION: You can only use your special ability TWICE." << endl;
+
+	int userinput = 0;
+	int count = 0;
+	bool _specialAbility = false;
+	double usedAbility = 0;
+	double oldStat = 0.0;
+	Enemy* enemy1 = new Demon;
+	bool temp = false;
+
+	while (enemy1->getHealth() >= 0 && _entry->getHealth() >= 0) {
+		cout << endl << "Now its you're turn to attack!" << endl;
+		if (count < 2) {
+			cout << "CHOOSE YOUR ATTACK: " << endl;
+			cout << "(1) Basic Attack" << endl;
+			cout << "(2) Special Attack" << endl;
+			userinput = input(1, 2);
+		}
+		else {
+			cout << "CHOOSE YOUR ATTACK: " << endl;
+			cout << "(1) Basic Attack" << endl;
+			userinput = input(1, 1);
+		}
+
+		if (_entry->getType() == "Archer") {
+			if (userinput == 1) {
+				enemy1->Defence(_entry->Attack());
+			}
+			else if (userinput == 2) {
+				cout << _ability->getcatchPhrase() << endl;
+				enemy1->Defence(_ability->specialAbility(_entry->getArmor(), _entry->getHealth(), _entry->getAttackDamage()));
+				_specialAbility = true;
+				count = count + 1;
+			}
+		}
+		else if (_entry->getType() == "Knight") {
+			if (userinput == 1) {
+				enemy1->Defence(_entry->Attack());
+			}
+			else if (userinput == 2) {
+				cout << _ability->getcatchPhrase() << endl;
+				oldStat = _entry->getArmor();
+				usedAbility = _ability->specialAbility(_entry->getArmor(), _entry->getHealth(), _entry->getAttackDamage());
+				_entry->setArmor(usedAbility);
+				_specialAbility = true;
+				count = count + 1;
+				enemy1->Defence(_entry->Attack());
+			}
+		}
+		else if (_entry->getType() == "Mage") {
+			if (userinput == 1) {
+				enemy1->Defence(_entry->Attack());
+			}
+			else if (userinput == 2) {
+				cout << _ability->getcatchPhrase() << endl;
+				oldStat = _entry->getHealth();
+				usedAbility = _ability->specialAbility(_entry->getArmor(), _entry->getHealth(), _entry->getAttackDamage());
+				_entry->setHealth(usedAbility);
+				_specialAbility = true;
+				count = count + 1;
+				enemy1->Defence(_entry->Attack());
+			}
+		}
+		cout << endl << "Good Attack! " << "The enemy's health is: " << enemy1->getHealth() << endl;
+
+		if (enemy1->getHealth() <= 0) {
+			break;
+		}
+		_entry->Defence(enemy1->Attack());
+		if (_specialAbility == true && count <= 2) {
+			if (_entry->getType() == "Knight") {
+				_entry->setArmor(oldStat);
+				_specialAbility = false;
+			}
+			else if (_entry->getType() == "Mage") {
+				_entry->setHealth(oldStat);
+				_specialAbility = false;
+			}
+		}
+		cout << endl << "The enemy just attacked you!" << endl << "This is your current health: " << _entry->getHealth() << endl;
+	}
+
+
+	delete enemy1;
+	if (_entry->getHealth() <= 0) {
+		cout << "YOU DIED!" << endl;
+		cout << endl;
+		_entry->setHealth(100.0);
+		return false;
+	}
+	else {
+		cout << "YOU BEAT THE ENEMY!" << endl;
+		cout << endl;
+		_entry->setHealth(100.0);
+		return true;
+	}
+}
+
 int main() {
 	
 	AbstractFactory* _Factory;
@@ -270,7 +378,8 @@ int main() {
 	character = CharSel(_Factory);
 	Character* entry = _Factory->CreateCharacter(character);
 	Ability* ability = _Factory->CreateAbility();
-	bool levelFailed = false;
+	bool level1Failed = false;
+	bool level2Failed = false;
 	bool endGame = false;
 	int userinput = 0;
 
@@ -280,39 +389,60 @@ int main() {
 		cout << "=============================" << endl << endl;
 		cout << "Choose one of the follow options:" << endl;
 		cout << "(1) Go to Level 1!" << endl;
-		cout << "(2) Go to the shop" << endl;
-		cout << "(3) Show my player attributes" << endl;
-		cout << "(4) Exit" << endl;
-		userinput = input(1, 4);
+		cout << "(2) Go to Level 2!" << endl;
+		cout << "(3) Go to the shop" << endl;
+		cout << "(4) Show my player attributes" << endl;
+		cout << "(5) Exit" << endl;
+		userinput = input(1, 5);
 		if (userinput == 1) {
-			levelFailed = Level1(entry, ability);
-			while (levelFailed == false) {
+			level1Failed = Level1(entry, ability);
+			while (level1Failed == false) {
 				cout << "Press 1 if you would like to try the level again or 2 to return to the menu!" << endl;
 				int _input = 0;
 				_input = input(1, 2);
 				cout << endl;
 				if (_input == 1) {
-					levelFailed = Level1(entry, ability);
+					level1Failed = Level1(entry, ability);
 				}
 				else if (_input == 2) {
 					break;
 				}
 			}
-			if (levelFailed == true) {
+			if (level1Failed == true) {
 				entry->addExperience(50);
 				cout << "You have earned 50 experience points!" << endl;
 				cout << "Go to the shop to spend your experience points!" << endl << endl;
 			}
 		}
 		else if (userinput == 2) {
-			shop(entry);
+			level2Failed = Level2(entry, ability);
+			while (level2Failed == false) {
+				cout << "Press 1 if you would like to try the level again or 2 to return to the menu!" << endl;
+				int _input = 0;
+				_input = input(1, 2);
+				cout << endl;
+				if (_input == 1) {
+					level2Failed = Level2(entry, ability);
+				}
+				else if (_input == 2) {
+					break;
+				}
+			}
+			if (level2Failed == true) {
+				entry->addExperience(50);
+				cout << "You have earned 50 experience points!" << endl;
+				cout << "Go to the shop to spend your experience points!" << endl << endl;
+			}
 		}
 		else if (userinput == 3) {
+			shop(entry);
+		}
+		else if (userinput == 4) {
 			cout << endl;
 			entry->printStats();
 			cout << endl;
 		}
-		else if (userinput == 4) {
+		else if (userinput == 5) {
 			cout << "BYE see you next time!" << endl;
 			endGame = true;
 		}
