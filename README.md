@@ -38,7 +38,26 @@
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+  ### Character Selection
+   * The first part of the game is character selection. The game first prompts the player to choose the name of their character and then asks for the type of character they would like to play!
+   ![](images/CharSelection.JPG)
+  ### Main Menu
+   * The main menu will allow the player to traverse through the different aspects of the game. \
+       ![](images/Main_Menu.JPG)
+  ### Shop
+   * The player receives experience points when completing levels of the game! With these experience points the player can upgrade their attributes in the shop! \
+       ![](images/Shop.JPG)
+  ### Printing Character Stats
+   * The player has an option in the menu to print out their character's attributes! \
+       ![](images/PrintStats.JPG)
+  ### Level 1
+   * Level 1 of the game is very easy! You are tasked with defeating the most powerful HUMAN! \
+      ![](images/Level1Snap.JPG)
+  ### Level 2
+   * Level 2 of the game is very difficult compared to the first level. You might need to complete level 1 multiple times in order to make your character strong enough to defeat the DEMON! \
+      ![](images/Level2Part1.JPG)
+      ![](images/Level2Part2.JPG)
+  
  ## Installation/Usage
  * To play the RPG we created, please clone this repository into a linux CLI environment that is able to use cmake. After cloning the repository, simply run cmake3. and then make in the terminal. This will compile the code in our program. To start playing the actual game you will need to type "./main". 
  ## Testing
