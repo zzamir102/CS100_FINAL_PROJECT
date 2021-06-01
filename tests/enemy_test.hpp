@@ -8,51 +8,51 @@
 
 using namespace std;
 
-TEST(EnemyTest, testBasic){
+TEST(EnemyTest, testHuman){
     Human humanTest;
     EXPECT_EQ(humanTest.getHealth(), 100.0);
     EXPECT_EQ(humanTest.getAttackDamage(), 40.0);
     EXPECT_EQ(humanTest.getArmor(), 50.0);
 }
 
-TEST(EnemyTest, AddHealth){
+TEST(EnemyTest, HumanAddHealth){
     Human humanTest;
     humanTest.addHealth(30);
     EXPECT_EQ(humanTest.getHealth(), 130.0);
 }
 
-TEST(EnemyTest, AddAttackDamage){
+TEST(EnemyTest, HumanAddAttackDamage){
     Human humanTest;
     humanTest.addAttackDamage(10);
     EXPECT_EQ(humanTest.getAttackDamage(), 50.0);
 }
 
-TEST(EnemyTest, AddArmor){
+TEST(EnemyTest, HumanAddArmor){
     Human humanTest;
     humanTest.addArmor(20);
     EXPECT_EQ(humanTest.getArmor(), 70.0);
 }
 
-TEST(EnemyTest, testBasic){
+TEST(EnemyTest, testDemon){
     Demon demonTest;
     EXPECT_EQ(demonTest.getHealth(), 100.0);
     EXPECT_EQ(demonTest.getAttackDamage(), 80.0);
     EXPECT_EQ(demonTest.getArmor(), 70.0);
 }
 
-TEST(EnemyTest, AddHealth){
+TEST(EnemyTest, DemonAddHealth){
     Demon demonTest;
     demonTest.addHealth(30);
     EXPECT_EQ(demonTest.getHealth(), 130.0);
 }
 
-TEST(EnemyTest, AddAttackDamage){
+TEST(EnemyTest, DemonAddAttackDamage){
     Demon demonTest;
     demonTest.addAttackDamage(20);
     EXPECT_EQ(demonTest.getAttackDamage(), 100.0);
 }
 
-TEST(EnemyTest, AddArmor){
+TEST(EnemyTest, DemonAddArmor){
     Demon demonTest;
     demonTest.addArmor(30);
     EXPECT_EQ(demonTest.getArmor(), 100.0);
