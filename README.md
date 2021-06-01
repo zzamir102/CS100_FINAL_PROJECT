@@ -30,12 +30,6 @@
 * The Ability class is an interface for the abilities that the characters will possess respectively. The the subclasses of the Ability class will have a virtual function that will implement a strategy pattern. This will allow the player of the RPG to have a variety of choices when it comes to their abilities. The multiple boxes below the MageAbility, KnightAbility, and ArcherAbility classes represent the creation of different strategies for each type of ability.
 * The Enemy class is a seperate class that the client code mainly uses. This class is the interface for the different type of enemies that the player must battle against in the RPG. The Human and Demon class inherent from the Enemy class, so that repetition can be avoided and different types of enemies can be created. 
 * The AbstractFactory class is the interface for the following classes: MageFactory, ArcherFactory, and KnightFactory. The three different factories create three families of characters. For example, the MageFactory's job is to create a Mage object and a MageAbility object. This same procedure is done with the ArcherFactory class and the KnightFactory class. The client code uses this factory to simplify the creation of different characters at runtime.  
-
- > ## Final deliverable
- > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  
  ## Screenshots
   ### Character Selection
