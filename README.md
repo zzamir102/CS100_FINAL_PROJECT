@@ -26,17 +26,10 @@
 ![](images/New_Project_Diagram.png)
 ### Class Diagram Description
 * The above diagram depicts our classes organized in the Abstract Factory Pattern and the Strategy Pattern.
-* The AbstractFactory class is the super class for the EnemyFactory and CharacterFactory. The EnemyFactory class and CharacterFactory class create the classes named Enemy and Character. The EnemyFactory is the interface for the different type of ememies that we are going to create in our RPG. As of now, the Human class and the Demon class inherit from the Enemy interface. Furthermore, the Mage, Knight, and Archer classes inherit from the Character class.
-* The AbilityStrategy class is the interface for the different abilities that our characters are going to have. The multiple boxes that overlap illustrate the unknown amount of abilites we are going to add to each character. Moreover, the Character class is the context for the AbilityStrategy class. 
- 
- > ## Phase III
- > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
- > * Before the meeting you should perform a sprint plan like you did in Phase II
- > * In the meeting with your TA you will discuss: 
- >   - How effective your last sprint was (each member should talk about what they did)
- >   - Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- >   - Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- >   - What tasks you are planning for this next sprint.
+* The Character class is an interface for the three different type of characters we are creating. The Character class provides all necessary getters and setters, so that the subclasses can be simply a constructor with certain values for damage, health, etc. 
+* The Ability class is an interface for the abilities that the characters will possess respectively. The the subclasses of the Ability class will have a virtual function that will implement a strategy pattern. This will allow the player of the RPG to have a variety of choices when it comes to their abilities. The multiple boxes below the MageAbility, KnightAbility, and ArcherAbility classes represent the creation of different strategies for each type of ability.
+* The Enemy class is a seperate class that the client code mainly uses. This class is the interface for the different type of enemies that the player must battle against in the RPG. The Human and Demon class inherent from the Enemy class, so that repetition can be avoided and different types of enemies can be created. 
+* The AbstractFactory class is the interface for the following classes: MageFactory, ArcherFactory, and KnightFactory. The three different factories create three families of characters. For example, the MageFactory's job is to create a Mage object and a MageAbility object. This same procedure is done with the ArcherFactory class and the KnightFactory class. The client code uses this factory to simplify the creation of different characters at runtime.  
 
  > ## Final deliverable
  > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 
@@ -47,7 +40,7 @@
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
+ * To play the RPG we created, please clone this repository into a linux CLI environment that is able to use cmake. After cloning the repository, simply run cmake3. and then make in the terminal. This will compile the code in our program. To start playing the actual game you will need to type "./main". 
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ * This project is tested/validated by the test benches we created in our test folder. These tests are using the Google unit test framework in order to validate the result of our various functions. We mainly tested the functions that we created in our classes. Each class has its own test file, and each function of that class is tested for correctness in its return value or functionality. The client code is tested by our group members individually. We run the client code and play the game to see if the game is running how it is supposed to be running. The main test that we are running in our main.cpp is valgrind memory leak tests. We use the valgrind memcheck framework everytime we execute main to be sure of no memory leaks. 
  
