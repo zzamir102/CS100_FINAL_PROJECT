@@ -3,6 +3,7 @@
 #include "character_test.hpp"
 #include "ability_test.hpp"
 #include "AttDef_test.hpp"
+#include "enemy_test.hpp"
 
 using namespace std;
 
