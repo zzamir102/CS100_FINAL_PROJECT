@@ -53,7 +53,7 @@
       ![](images/Level2Part2.JPG)
   
  ## Installation/Usage
- * To play the RPG we created, please clone this repository into a linux CLI environment that is able to use cmake. After cloning the repository, simply run cmake3. and then make in the terminal. This will compile the code in our program. To start playing the actual game you will need to type "./main". 
+ * To play the RPG we created, please clone this repository into a linux CLI environment that is able to use cmake. After cloning the repository, simply run `cmake3 .` and then `make` in the terminal. This will compile the code in our program. To start playing the actual game you will need to type `./game`. 
  ## Testing
  * This project is tested/validated by the test benches we created in our test folder. These tests are using the Google unit test framework in order to validate the result of our various functions. 
  * We mainly tested the functions that we created in our classes. Each class has its own test file, and each function of that class is tested for correctness in its return value or functionality. The client code is tested by our group members individually. 
