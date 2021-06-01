@@ -23,7 +23,7 @@
 * The second pattern we considered is the strategy pattern. We chose this pattern because it lets us create different attacks for the characters in our RPG. An issue we might encounter in our project is the creation of multiple attack functions, which consequently requires us to modify our classes. The strategy pattern will be a great solution for this problem because we can continuously add different strategies to attack without modifying our class. The strategy pattern allows us to branch out from a class to a interface that supports the creation of multiple strategies. This pattern will allow us to continuously add new attack strategies if time is allotted. 
 
 ## Class Diagram
-![](images/New_Project_Diagram.png)
+![](images/Final_Project_Diagram.jpg)
 ### Class Diagram Description
 * The above diagram depicts our classes organized in the Abstract Factory Pattern and the Strategy Pattern.
 * The Character class is an interface for the three different type of characters we are creating. The Character class provides all necessary getters and setters, so that the subclasses can be simply a constructor with certain values for damage, health, etc. 
