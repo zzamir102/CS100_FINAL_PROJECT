@@ -9,7 +9,7 @@ ADD_EXECUTABLE(test
 )
 
 
-ADD_EXECUTABLE(main
+ADD_EXECUTABLE(game
 	src/main.cpp
 )
 
